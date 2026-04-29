@@ -1,0 +1,473 @@
+/* assets/css/style.css */
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/*  Custom Paddings  */
+.pt-100{
+    padding-top: 100px;
+}
+.pb-100{
+    padding-bottom: 100px;
+}
+
+
+/* Custom Margins */
+.mt-100{
+    margin-top: 100px;
+}
+.mb-100{
+    margin-bottom: 100px;
+}
+.mt-20{
+    margin-top: 20px;
+}
+.mb-20{
+    margin-bottom: 20px;
+}
+
+
+
+
+/* Navbar Styles */
+.navbar {
+    padding: 15px 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Brand/Logo Styling */
+.navbar-brand {
+    font-weight: 600;
+}
+
+.brand-text {
+    font-size: 1.4rem;
+    color: #28a745;
+}
+
+/* Navigation Links */
+.nav-link {
+    font-weight: 500;
+    color: #2c3e50 !important;
+    padding: 8px 15px !important;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:not(.btn)::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #28a745;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:not(.btn):hover::after {
+    width: 50%;
+}
+
+.nav-link.active::after {
+    width: 50%;
+}
+
+/* Button Styling */
+.btn {
+    padding: 8px 20px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.btn-outline-success {
+    border-width: 2px;
+}
+
+.btn-outline-success:hover {
+    background-color: #28a745;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.2);
+}
+
+.btn-success {
+    background-color: #28a745;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+}
+
+/* Scrolled Navbar Style */
+.navbar.scrolled {
+    padding: 10px 0;
+    background-color: rgba(255, 255, 255, 0.98) !important;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Responsive */
+@media (max-width: 991px) {
+    .navbar-nav {
+        padding: 1rem 0;
+    }
+    
+    .nav-item {
+        margin: 0.5rem 0;
+    }
+    
+    .nav-link:not(.btn)::after {
+        display: none;
+    }
+    
+    .btn {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+}
+
+/* Animation for navbar items */
+.nav-item {
+    opacity: 0;
+    animation: fadeInDown 0.5s ease forwards;
+}
+
+.nav-item:nth-child(1) { animation-delay: 0.1s; }
+.nav-item:nth-child(2) { animation-delay: 0.2s; }
+.nav-item:nth-child(3) { animation-delay: 0.3s; }
+.nav-item:nth-child(4) { animation-delay: 0.4s; }
+.nav-item:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Language Switcher CSS */
+/* Add this CSS */
+/* Style the Google Translate dropdown */
+/* Essential CSS to make the translator visible and styled */
+/* Add to your style.css */
+#google_translate_element {
+    padding: 8px;
+}
+
+.goog-te-gadget {
+    font-family: inherit !important;
+}
+
+.goog-te-gadget-simple {
+    background-color: transparent !important;
+    border: 1px solid #28a745 !important;
+    padding: 8px 10px !important;
+    border-radius: 4px !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    display: inline-flex !important;
+    cursor: pointer !important;
+}
+
+.goog-te-gadget-simple .goog-te-menu-value {
+    color: #28a745 !important;
+}
+
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+
+body {
+    top: 0px !important;
+}
+.goog-te-gadget-simple .goog-te-menu-value span {
+    text-decoration: none;
+    color: #28a745;
+}
+
+/* Remove extra borders */
+.goog-te-gadget-simple .goog-te-menu-value span:not(:last-child) {
+    border-right: none !important;
+}
+
+/* Hide the original Google Translate bar */
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+
+body {
+    top: 0px !important;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    #google_translate_element {
+        width: 100%;
+    }
+    
+    .goog-te-gadget-simple {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+/* Hero Section */
+.hero-section {
+    padding-top: 76px; /* Navbar height + extra padding */
+    background-color: #f8f9fa;
+}
+
+.hero-section h1 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.hero-section .lead {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* How It Works Section */
+.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card i {
+    color: #28a745;
+}
+
+/* Feature Cards */
+.feature-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.feature-icon-wrapper {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background: #f8f9fa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover .feature-icon-wrapper {
+    transform: scale(1.1);
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: #28a745;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.security-feature, .project-feature {
+    transition: all 0.3s ease;
+}
+
+.security-feature:hover, .project-feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.modal-content {
+    border: none;
+    border-radius: 15px;
+}
+
+.modal-header {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+@media (max-width: 768px) {
+    .feature-card {
+        margin-bottom: 1rem;
+    }
+    
+    .modal-dialog {
+        margin: 1rem;
+    }
+}
+
+
+/* Buttons */
+.btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+    border-color: #218838;
+}
+
+/* About CSS */
+.about-section {
+    background-color: #f8f9fa;
+}
+
+.about-image {
+    overflow: hidden;
+}
+
+.about-image img {
+    transition: transform 0.3s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.05);
+}
+
+.experience-badge {
+    bottom: 30px;
+    right: -20px;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.icon-box {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-success-light {
+    background-color: rgba(40, 167, 69, 0.1);
+}
+
+.stats-row {
+    padding-top: 2rem;
+    border-top: 1px solid #dee2e6;
+    margin-top: 2rem;
+}
+
+.stat-item h3 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.stat-item p {
+    font-size: 0.9rem;
+}
+
+.counter-number {
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.stat-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.stat-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Animation for statistics */
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.stat-item {
+    animation: countUp 0.5s ease forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .experience-badge {
+        width: 100px;
+        height: 100px;
+        bottom: 20px;
+        right: -10px;
+    }
+
+    .experience-badge h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-row {
+        margin-top: 1rem;
+        padding-top: 1rem;
+    }
+
+    .stat-item h3 {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+/* Footer */
+footer {
+    margin-top: 2rem;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,223 @@
+/* General Styles */
+body {
+    padding-top: 56px;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    position: fixed;
+    top: 56px;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding: 20px 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #343a40;
+}
+
+.sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 15px 20px;
+    transition: all 0.3s;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .nav-link i {
+    width: 20px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+/* Main Content Area */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+/* Cards */
+.stat-card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Tables */
+.table-responsive {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.table th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+}
+
+/* Charts Container */
+.chart-container {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+/* CSS for Projects page of Admin  */
+
+
+/* Filter Card */
+.filter-card {
+    background: #fff;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Table Styles */
+.table th {
+    font-weight: 600;
+    color: #495057;
+    background-color: #f8f9fa;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+/* Action Buttons */
+.btn-group .btn {
+    padding: 0.25rem 0.5rem;
+    margin: 0 2px;
+}
+
+.btn-group .btn i {
+    font-size: 0.875rem;
+}
+
+/* Status Badges */
+.badge {
+    padding: 0.5em 0.8em;
+    font-weight: 500;
+}
+
+/* Modal Styles */
+.modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.modal-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+}
+
+/* Form Controls in Modal */
+.modal .form-control, 
+.modal .form-select {
+    border-radius: 0.25rem;
+    border: 1px solid #dee2e6;
+    padding: 0.5rem 0.75rem;
+}
+
+.modal .form-control:focus, 
+.modal .form-select:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+/* Project Details in Modal */
+.project-details p {
+    margin-bottom: 0.5rem;
+}
+
+.project-details strong {
+    color: #495057;
+    min-width: 120px;
+    display: inline-block;
+}
+
+/* Pagination Customization */
+.pagination .page-link {
+    padding: 0.5rem 0.75rem;
+    color: #28a745;
+    border-color: #dee2e6;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+/* Search and Filter Controls */
+.search-box {
+    position: relative;
+}
+
+.search-box .form-control {
+    padding-left: 2.5rem;
+}
+
+.search-box i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    .table-responsive {
+        border: 0;
+    }
+    
+    .btn-group {
+        display: flex;
+        margin-top: 0.5rem;
+    }
+    
+    .btn-group .btn {
+        flex: 1;
+    }
+}
